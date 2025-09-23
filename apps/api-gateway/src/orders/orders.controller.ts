@@ -16,3 +16,14 @@ export class OrdersController {
     return this.ordersServiceClient.send('create-order', orderData);
   }
 }
+
+/**
+ * so note here we are using the client proxy instance to send a message to the order microservice
+ * the send method takes two arguments, the first argument is the pattern which is a string that identifies
+ * the message, in this case we are using 'create-order' as the pattern, the second argument is the data
+ * that we want to send to the microservice, in this case we are sending the orderData object
+ *
+ * the other means is by message brokers or event bus  where the microservices communicate with each other
+ * using a message broker or an event bus, in this case we are using kafka as the message broker
+ *
+ */

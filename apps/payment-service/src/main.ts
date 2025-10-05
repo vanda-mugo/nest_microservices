@@ -15,5 +15,6 @@ async function bootstrap() {
   );
 
   await app.listen();
+  console.log('Payment Service is listening on port 4004');
 }
 bootstrap();

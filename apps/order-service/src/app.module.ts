@@ -19,6 +19,14 @@ import { OrdersService } from './orders/orders.service';
           port: 4004,
         },
       },
+      {
+        name: MICROSERVICES_CLIENTS.PRODUCT_REDIS_CLIENT,
+        transport: Transport.REDIS,
+        options: {
+          host: 'localhost',
+          port: 6379,
+        },
+      },
     ]),
   ],
   controllers: [AppController, OrdersController],
